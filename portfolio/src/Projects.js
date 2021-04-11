@@ -1,11 +1,11 @@
 
 import React from 'react'
 
-function Projects({ setSection }) {
+function Projects() {
     return (
         <div>
             <h1>Projects go here</h1>
-            <button onClick={setSection(null)}>Back</button>
+
         </div>
     )
 }

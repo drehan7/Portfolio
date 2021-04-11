@@ -1,5 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
+
+/* (background blackish)#161a1d | (button blue)#219ebc */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #161a1d;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.home-main-container {
+  border: 1px solid red;
+  margin: auto;
+}
+.name-container {
+  border: 1px solid green;
+  font-size: 4em;
+  text-align: center;
+  margin: 1%;
+}
+
+.social-media-container ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.social-media-container ul li {
+  margin: 1%;
+}
+.social-media-container ul li:hover {
+  opacity: 0.7;
+}
+
+.about-container {
+  border: 2px solid yellow;
+  text-align: center;
+  margin: 2%;
+}
+
+.button {
+  font-size: 1.5rem;
+  /* background-color: #219ebc; */
+  border: none;
+  color: #219ebc;
+  width: 10rem;
+  height: 2rem;
+}
+.button:hover {
+  opacity: 0.7;
+}
+
+.nav-container {
+  border: 2px solid purple;
+  display: flex;
+  justify-content: center;
 }
