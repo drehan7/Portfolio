@@ -1,6 +1,7 @@
 import Projects from './Projects';
 import Resume from './Resume';
 import About from './About';
+import Contact from './Contact';
 
 import { SocialIcon } from 'react-social-icons';
 
@@ -11,7 +12,11 @@ import { BrowserRouter, Link, Route } from 'react-router-dom';
 
 function App() {
 
+  const [section, setSection] = useState('about')
 
+  const chooseSection = (e) => {
+    setSection(e.target.id)
+  }
 
   return (
     <div className="app-container">
@@ -27,12 +32,19 @@ function App() {
           </div>
         </div>
         <div className="nav-container">
-          <button className="about-button button">About</button>
-          <button className="projects-button button">Projects</button>
-          <button className="resume-button button" >Resume</button>
+          <button id="about" className={`about-button button ${(section === 'about') ? "selecte" : ""}`} onClick={chooseSection}>About</button>
+          <button id="projects" className={`projects-button button ${(section === 'projects') ? "selecte" : ""}`} onClick={chooseSection}>Projects</button>
+          <button id="resume" className={`resume-button button ${(section === 'resume') ? "selecte" : ""}`} onClick={chooseSection}>Resumé</button>
+          <button id="contact" className={`contact-button button ${(section === 'contact') ? "selecte" : ""}`} onClick={chooseSection}>Contact</button>
         </div>
       </div>
-      <About />
+      <div className="body-container">
+        <About section={section} />
+        <Projects section={section} />
+        <Resume section={section} />
+        <Contact section={section} />
+      </div>
+
 
     </div>
   )
